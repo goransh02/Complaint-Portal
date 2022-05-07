@@ -16,9 +16,9 @@
       <mat-panel-description style="font-weight: 900;">
         {{book.price}} </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>{{book.description}}</p> <button class="btn btn-sm btn-primary" routerLink="/edit-book/{{book._id}}"
-      *ngIf="securityObject.isAuthenticated">Edit</button>
-    <button class="btn btn-sm btn-danger" (click)="delete(book._id, i)"
+    <p>{{book.description}}</p> <button mat-raised-button class="btn btn-sm btn-primary"
+      routerLink="/edit-book/{{book._id}}" *ngIf="securityObject.isAuthenticated">Edit</button>
+    <button mat-raised-button class="btn btn-sm btn-danger" (click)="delete(book._id, i)"
       *ngIf="securityObject.canDeleteComplaint">Delete</button>
 
   </mat-expansion-panel>
