@@ -1,0 +1,15 @@
+<div style="background-color: darkblue;"><button mat-button [matMenuTriggerFor]="menu"
+    style="margin: 1%;background-color: black;color: white;">Menu</button>
+  <h1 style="display: inline;margin-left: 35% ;color: wheat;font-size: xx-large;">Complaint Portal</h1>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLinkActive="active" routerLink="/books-list">Show Complaints</button>
+    <button mat-menu-item routerLinkActive="active" routerLink="/add-book">Add Complaints</button>
+    <button mat-menu-item routerLinkActive="active" routerLink="/login">Login</button>
+
+
+  </mat-menu>
+
+</div>
+<div style="margin-top: 5%;"></div>
+
+<router-outlet></router-outlet>
