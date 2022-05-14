@@ -6,6 +6,7 @@
 .form-head {
   font-size: larger;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 5px;
 }
 
 .form-control {
@@ -15,4 +16,22 @@
   border-color: black;
   height: 30px;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+.field {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.field:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-top: 2%;
+  border-radius: 5px;
 }
