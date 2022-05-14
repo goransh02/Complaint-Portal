@@ -67,14 +67,23 @@ bookRoute.route('/delete-book/:id').delete((req, res, next) => {
 })
 
 //Find Book
-bookRoute.route('/update-book/:name').put((req, res, next) => {
-      Book.findByNameAndUpdate(req.params.name, {
+// router.get('/user/:username', function(req, res, next) {
+//   User.findOne({userName: req.params.username}, function(err, user) {
+//          if(err)
+//            console.log(err);
+//          else
+//            //do something with user
+//     })
+// });
+bookRoute.route('/read-book/:name').put((req, res, next) => {
+      Book.findOne(req.params.name, {
             $set: req.body
       }, (error, data) => {
             if (error) {
                   return next(error)
             } else {
                   res.json(data)
+                  console.log("Hi")
             }
       })
 })

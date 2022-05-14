@@ -34,6 +34,7 @@ export class BooksListComponent implements OnInit {
       this.Books =res;
     });    
   }
+  
  
   delete(id:any, i:any) {
     console.log(id);

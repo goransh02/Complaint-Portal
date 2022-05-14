@@ -1,37 +1,47 @@
-<form [formGroup]="updateForm" (ngSubmit)="onUpdate()" style="margin-left: 40%;">
-  <div class="form-group">
+<div class="row justify-content-center mt-5">
+  <div class="col-md-12">
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()"
+      style="border-radius: 5px;margin-left: 10%;margin-right: 40%;height:450px;width:80%;background-color: rgb(215, 217, 245);">
+      <div class="form-group">
 
-    <mat-form-field appearance="fill" style="width: 30%;">
-      <mat-label style="font-size: medium;">Enter subject</mat-label>
-      <input matInput class="form-control" type="text" formControlName="name" required style="padding: -10px;">
-    </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 80%;margin-left: 10%;margin-top: 5%;" class="field">
+          <mat-label style="font-size: medium;">Enter subject</mat-label>
+          <input matInput class="form-control" type="text" formControlName="name" required
+            style="border-color: aliceblue;">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group" style="border-radius: 5px;">
+        <mat-form-field appearance="fill" style="width: 80%;margin-left: 10%;" class="field">
+          <mat-label>Sport</mat-label>
+          <mat-select formControlName="price">
+            <mat-option price="chess" value="chess">Chess</mat-option>
+            <mat-option price="cricket" value="cricket">Cricket</mat-option>
+            <mat-option price="basketball" value="basketball">Basketball</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="fill" style="width: 80%;margin-left: 10%;" class="field">
+          <mat-label style="font-size: medium;">Enter description</mat-label>
+
+          <textarea matInput class="form-control" type="text" formControlName="description" required
+            style="height: 100px;"></textarea>
+        </mat-form-field>
+      </div>
+
+
+      <div class="form-group" style="margin-top: 5%;">
+        <a href="/show-books"> <button mat-raised-button price="accent"
+            style="margin-left: 10%;background-color: rgb(107, 107, 153);color: aliceblue;"
+            class="field">Cancel</button></a>
+        <button mat-raised-button price="accent" type="submit"
+          style="margin-left: 10%;background-color: rgb(107, 107, 153);color:aliceblue" class="field">Add
+          Complaint</button>
+
+      </div>
+    </form>
   </div>
-
-  <div class="form-group">
-    <mat-form-field appearance="fill" style="width: 30%;">
-      <mat-label>Sport</mat-label>
-      <mat-select formControlName="price">
-        <mat-option price="chess" value="chess">Chess</mat-option>
-        <mat-option price="cricket" value="cricket">Cricket</mat-option>
-        <mat-option price="basketball" value="basketball">Basketball</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-  </div>
-
-  <div class="form-group">
-    <mat-form-field appearance="fill" style="width: 30%;">
-      <mat-label style="font-size: medium;">Enter description</mat-label>
-
-      <textarea matInput class="form-control" type="text" formControlName="description" required></textarea>
-    </mat-form-field>
-  </div>
-
-
-  <div class="form-group" style="margin-top: 5%;">
-    <a href="/show-books"> <button mat-raised-button price="accent">Cancel</button></a>
-    <button mat-raised-button price="accent" type="submit" style="margin-left: 10%;">Add Complaint</button>
-
-  </div>
-
-</form>
+</div>
