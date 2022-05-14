@@ -14,7 +14,6 @@ bookRoute.route('/add-book').post((req, res, next) => {
             }
       })
 });
-
 // Get all Book
 bookRoute.route('/').get((req, res) => {
       Book.find((error, data) => {
@@ -27,11 +26,22 @@ bookRoute.route('/').get((req, res) => {
 })
 
 // Get Book
-bookRoute.route('/read-book/:id').get((req, res) => {
+bookRoute.route('/read-book/:id').get((req, res, next) => {
       Book.findById(req.params.id, (error, data) => {
             if (error) {
                   return next(error)
             } else {
+                  res.json(data)
+            }
+      })
+})
+bookRoute.route('/read-book/hi/:name').get((req, res, next) => {
+      Book.findOne(req.params.name, (error, data) => {
+            if (error) {
+                  console.log("Bye")
+                  return next(error)
+            } else {
+                  console.log("Hi")
                   res.json(data)
             }
       })

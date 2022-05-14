@@ -29,9 +29,11 @@ export class BooksListComponent implements OnInit {
   }
  
   ngOnInit(): void {
+    
     this.crudService.GetBooks().subscribe(res => {
       console.log(res)
       this.Books =res;
+      console.log(this.Books)
     });    
   }
   

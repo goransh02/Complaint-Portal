@@ -42,8 +42,9 @@ export class CrudService {
         catchError(this.handleError)
       )
   }
-  GetBookbyName(name:any): Observable<any> {
-    let API_URL = `${this.REST_API}//read-book/${name}`;
+  GetBook1(name:any): Observable<any> {
+    let API_URL = `${this.REST_API}/read-book/hi/${name}`;
+    console.log(name)
     return this.httpClient.get(API_URL, { headers: this.httpHeaders })
       .pipe(map((res: any) => {
           return res || {}
