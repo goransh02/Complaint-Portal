@@ -9,8 +9,8 @@
           <div class="form-group">
 
             <div class="input-group">
-              <mat-form-field appearance="fill" style="width: 30%;" class="field">
-                <mat-label style="font-size: medium;">UserName</mat-label>
+              <mat-form-field appearance="fill" style="width: 50%;" class="field">
+                <mat-label style="font-size: small;">UserName</mat-label>
                 <input matInput
                   style="border-width: 3px;border-radius:100px;border-color: black;height: 30px;font-family: Arial, Helvetica, sans-serif;"
                   id="userName" name="userName" class="form-control" required [(ngModel)]="user.userName"
@@ -20,22 +20,24 @@
             </div>
           </div>
           <div class="form-group" style="margin-top: 5px;">
-
-            <mat-label style="font-size: medium;">Password</mat-label>
-            <div class="input-group">
-              <mat-form-field appearance="fill" style="width: 30%;" class="field">
+            <mat-form-field appearance="fill" style="width: 50%;" class="field">
+              <mat-label style="font-size: x-small;">Enter your password</mat-label>
+              <div class="input-group">
                 <input matInput
-                  style="border-width: 3px;border-radius:100px;border-color: black;height: 30px;font-family: Arial, Helvetica, sans-serif;"
+                  style="height: 5px;border-width: 3px;border-radius:100px;border-color: black;height: 30px;font-family: Arial, Helvetica, sans-serif;"
                   id="password" name="password" class="form-control" required [(ngModel)]="user.password"
-                  type="password" /></mat-form-field>
-              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            </div>
+                  type="password" />
+              </div>
+            </mat-form-field>
+
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
           </div>
         </div>
-        <div class="panel-footer">
-          <button mat-raised-button style="margin-top: 10px;" color="accent" (click)="login()">Login</button>
-        </div>
+      </div>
+      <div class="panel-footer">
+        <button mat-raised-button style="margin-top: 10px;" color="accent" (click)="login()">Login</button>
       </div>
     </div>
   </div>
+
 </form>
