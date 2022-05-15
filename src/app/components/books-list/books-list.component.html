@@ -22,9 +22,10 @@
       </div>
     </mat-expansion-panel-header>
     <p>{{book.description}}</p> <button mat-raised-button class="btn btn-sm btn-primary"
-      routerLink="/edit-book/{{book._id}}" *ngIf="securityObject.isAuthenticated">Edit</button>
+      routerLink="/edit-book/{{book._id}}" *ngIf="securityObject.isAuthenticated"
+      style="background-color: rgb(99, 105, 185);color:white">Edit</button>
     <button mat-raised-button class="btn btn-sm btn-danger" (click)="delete(book._id, i)"
-      *ngIf="securityObject.canDeleteComplaint">Delete</button>
+      *ngIf="securityObject.canDeleteComplaint" style="background-color: rgb(99, 105, 185);color:white">Delete</button>
 
   </mat-expansion-panel>
 
